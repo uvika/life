@@ -1,72 +1,26 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+class Cell:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        initialpopulation = set([(0,0), (1,1),(1,2)])
 
-import sys, random
-from PyQt5.QtWidgets import QWidget, QApplication
-from PyQt5.QtGui import QPainter, QColor, QPen
-from PyQt5.QtCore import Qt, QPoint
-
-
-class Point(QWidget):
-
-    def __init__(self):
-        super().__init__()
-
-        self.initUI()
-
-
-    def initUI(self):
-
-        self.setGeometry(400, 150, 500, 500)
-        self.setWindowTitle('Game of Life')
-        self.show()
-
-
-    def paintEvent(self, e):
-
-        qp = QPainter()
-        qp.begin(self)
-        self.drawPoints(qp)
-        qp.end()
-
-
-    def drawPoints(self, qp):
-
-        qp.setPen(Qt.blue)
-        size = self.size()
-        x = random.randint(1, size.width()-1)
-        y = random.randint(1, size.height()-1)
-        qp.drawPoint(x, y)
-        
-     def pointNeighbours(self, x, y)
+    def getNeighbours(self, cell):
+        self.x, self.y = cell
+        neighbors = [(x + i, y + j)
+                     for i in xrange(-1, 2)
+                     for j in xrange(-1, 2)
+                     if not i == j == 0]
+        return neighbors
     
-        life = 0
-       
-        if x-1 and y-1:
-            life += 1
-        if x-1 and j:
-            life += 1
-        if x-1 and y+1:
-            life += 1
-        
-        if y-1 and x:
-            ctr += 1
-        if y+1 and x:
-            life += 1
-        
-        if x+1 and y-1:
-            life += 1
-        if x+1 and y:
-            life += 1
-        if x+1 and y+1:
-            life += 1
+    def aliveCell(cell): 
+            alive = set()
+            if (neighbours == 2 or ( neighbours == 3 and cell): 
+                alive.add(cell)
+            else
+                alive.
 
-        return life
-   #set()
-        
+    def deadCell (cell):
+            if (neighbours > 3 or ( neighbours < 1 and cell ):
+                alive.remove(cell)
 
-if __name__ == '__main__':
 
-    app = QApplication(sys.argv)
-    ex = Point()
-    sys.exit(app.exec_())
