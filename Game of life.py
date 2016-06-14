@@ -13,14 +13,14 @@ class Cell:
         return neighbors
     
     def aliveCell(cell): 
-            alive = set()
-            if (neighbours == 2 or ( neighbours == 3 and cell): 
+            if (neighbours == 2 or ( neighbours == 3 and cell)): 
                 alive.add(cell)
-            else
-                alive.
-
-    def deadCell (cell):
-            if (neighbours > 3 or ( neighbours < 1 and cell ):
+            else:
                 alive.remove(cell)
 
-
+    def field(self):
+            alive = set()
+            init1 = Cell(0, 0)
+            init2 = Cell(1, 1)
+            init3 = Cell(1, 2)
+            alive.update((0, 0), (0, 1), (0, 2), (1, 2))
