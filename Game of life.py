@@ -22,4 +22,4 @@ class Cell:
             init1 = сell(0, 0)
             init2 = сell(1, 1)
             init3 = сell(1, 2)
-            alive.update((0, 0), (0, 1), (0, 2), (1, 2))
+            alive.update(init1, init2, init3)
