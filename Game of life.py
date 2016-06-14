@@ -2,7 +2,6 @@ class Cell:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        initialpopulation = set([(0,0), (1,1),(1,2)])
 
     def getNeighbours(self, cell):
         self.x, self.y = cell
@@ -20,7 +19,7 @@ class Cell:
 
     def field(self):
             alive = set()
-            init1 = Cell(0, 0)
-            init2 = Cell(1, 1)
-            init3 = Cell(1, 2)
+            init1 = сell(0, 0)
+            init2 = сell(1, 1)
+            init3 = сell(1, 2)
             alive.update((0, 0), (0, 1), (0, 2), (1, 2))
