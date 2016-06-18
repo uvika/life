@@ -1,7 +1,5 @@
 class Cell:
     def __init__(x, y):
-        #self.x = x
-        #self.y = y
         cell = x, y
         print(alive)
 
