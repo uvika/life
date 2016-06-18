@@ -11,7 +11,7 @@ class Cell:
                      if not i == j == 0]
     
     def aliveCell(cell):
-            if (neighbours == 2 or (neighbours == 3 and cell)): 
+            if (neighbours == 2 or neighbours == 3 and cell): 
                 alive.add(cell)
             else:
                 alive.remove(cell)
