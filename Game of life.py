@@ -17,4 +17,4 @@ def game_life(cells, generations):
         alive = set(xy for xy, cnt in neighbours.items()
                     if cnt == 3 or cnt == 4 and xy in alive)
 
-game_life([[0, 1], [1, 1], [1, 2]], 10) 
+game_life([[0, 1], [1, 1], [1, 2]], 5) 
