@@ -1,20 +1,25 @@
-from collections import Counter
+class Cell:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-def __init__(g, alive):
-   print(alive)
+    def getNeighbours(self, cell):
+        self.x, self.y = cell
+        neighbors = [(x + i, y + j)
+                     for i in xrange(-1, 2)
+                     for j in xrange(-1, 2)
+                     if not i == j == 0]
+        return neighbors
+    
+    def aliveCell(cell): 
+            if (neighbours == 2 or ( neighbours == 3 and cell)): 
+                alive.add(cell)
+            else:
+                alive.remove(cell)
 
-def game_life(cells, generations):
-    alive = set((x, y)
-                for y, row in enumerate(cells)
-                for x, cell in enumerate(row)
-                if cell)
-    for g in range(generations):
-        __init__(g, alive)
-        neighbours = Counter((x + i, y + j)
-                            for x, y in alive
-                            for i in range(-1, 2)
-                            for j in range(-1, 2))
-        alive = set(xy for xy, cnt in neighbours.items()
-                    if cnt == 3 or cnt == 4 and xy in alive)
-
-game_life([[0, 1], [1, 1], [1, 2]], 5) 
+    def field(self):
+            alive = set()
+            init1 = сell(0, 0)
+            init2 = сell(1, 1)
+            init3 = сell(1, 2)
+            alive.update(init1, init2, init3)
