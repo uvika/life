@@ -1,0 +1,17 @@
+  class Cell:
+    def isRestAlive(alive):
+        alive = set()
+        cell = x, y
+        cell = 0, 0
+        cell = 1, 1
+        cell = 1, 2
+        alive.add(cell)
+        alivenb = [(x + i, y + j) for cell in alive  
+                         for i in range(-1, 2)
+                         for j in range(-1, 2)
+                         if not i == j == 0]
+
+        if (len(alivenb) == 2 or len(alivenb) == 3):
+            return true
+        else:
+            return false
